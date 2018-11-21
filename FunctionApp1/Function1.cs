@@ -29,11 +29,11 @@ namespace FunctionApp1
             var redis = new MyRedis();
             if (name == "create")
             {
-                redis.CreateAsync();
+                await redis.CreateAsync();
             }
             else
             {
-                redis.QueryAsync();
+                await redis.QueryAsync();
             }
 
             return name != null
